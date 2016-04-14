@@ -3,7 +3,7 @@ SOURCES = \
 	  src/main.cpp \
 	  src/params.cpp \
 	  src/parser.cpp
-APP = find-ifdef
+APP = find-ifdefs
 CPPFLAGS = -std=c++11 -Wall -O2 -Iinclude
 PREFIX ?= /usr/local
 
