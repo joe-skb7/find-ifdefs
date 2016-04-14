@@ -39,10 +39,8 @@ int main(int argc, char *argv[])
 	}
 
 	res = parser.parse(params.def());
-	if (!res) {
-		printUsage(argv[0]);
+	if (!res)
 		return EXIT_FAILURE;
-	}
 
 	parser.printDef();
 	cout << endl;
