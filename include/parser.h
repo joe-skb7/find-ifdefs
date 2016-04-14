@@ -14,6 +14,7 @@ public:
 
 	bool readFile(const string &filePath);
 	bool parse(const string &def);
+	void printDef() const;
 	void printIfdefs();
 private:
 	string m_filePath;

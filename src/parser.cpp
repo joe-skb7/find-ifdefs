@@ -83,6 +83,12 @@ bool Parser::parse(const string &def)
 	return false;
 }
 
+void Parser::printDef() const
+{
+	cout << m_filePath << ":" << m_defLineNum+1 << ":"
+			<< m_fileContent.at(m_defLineNum) << endl;
+}
+
 void Parser::printIfdefs()
 {
 	while (!m_ifdefs.empty()) {
