@@ -88,7 +88,7 @@ void Parser::printIfdefs()
 	while (!m_ifdefs.empty()) {
 		int lineNum = m_ifdefs.top();
 		cout << m_filePath << ":" << lineNum+1 << ":"
-			<< m_fileContent.at(lineNum) << endl;
+				<< m_fileContent.at(lineNum) << endl;
 		m_ifdefs.pop();
 	}
 }
