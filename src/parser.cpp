@@ -79,7 +79,7 @@ bool Parser::parse(const string &def)
 		}
 	}
 
-	cerr << "Error: " << def << " not found in file" << endl;
+	cerr << "Error: " << m_filePath << ": " << def << " not found" << endl;
 	return false;
 }
 
