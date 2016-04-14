@@ -1,4 +1,4 @@
-find-ifdef
-----------
+find-ifdefs
+-----------
 
 Tool for listing all #ifdefs/#ifs that specified definition is wrapped into.
