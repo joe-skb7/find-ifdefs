@@ -44,6 +44,8 @@ int main(int argc, char *argv[])
 		return EXIT_FAILURE;
 	}
 
+	parser.printDef();
+	cout << endl;
 	parser.printIfdefs();
 
 	return EXIT_SUCCESS;
