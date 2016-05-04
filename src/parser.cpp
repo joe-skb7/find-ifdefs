@@ -42,6 +42,7 @@ bool Parser::parse(const string &def)
 		if (line.empty())
 			continue;
 
+		// Look only for preprocessor directives
 		trim(line);
 		if (line.at(0) != '#')
 			continue;
@@ -52,26 +53,33 @@ bool Parser::parse(const string &def)
 
 		size_t pos;
 
+		// Look for "#if"; if found -- push to stack
 		pos = line.find("if");
 		if (pos == 0) {
 			m_ifdefs.push(lineNum);
 			continue;
 		}
 
+		// Look for "#endif"; if found -- pop previous #if from stack
 		pos = line.find("endif");
 		if (pos == 0) {
 			m_ifdefs.pop();
 			continue;
 		}
 
+		// Look for "#define"
 		pos = line.find("define");
 		if (pos != 0)
 			continue;
-		line.erase(0, 6);
+		line.erase(0, 6); // remove "define" word
 		ltrim(line);
+
+		// Look for specified definition
 		pos = line.find(def);
 		if (pos != 0)
 			continue;
+
+		// Check right boundary of definition
 		line.erase(pos, def.length());
 		if (line.length() == 0 || isspace(line.at(0))) {
 			m_defLineNum = lineNum;
