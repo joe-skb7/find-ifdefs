@@ -16,10 +16,11 @@ public:
 	bool parse(const string &def);
 	void printDef() const;
 	void printIfdefs();
+
 private:
 	string m_filePath;
 	vector<string> m_fileContent;
-	stack<int> m_ifdefs;		/* line numbers for #ifdefs */
+	stack<int> m_ifdefs;		// line numbers for #ifdefs
 	int m_defLineNum;
 };
 
