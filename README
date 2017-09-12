@@ -1,4 +1,14 @@
 find-ifdefs
------------
+===========
 
 Tool for listing all #ifdefs/#ifs that specified definition is wrapped into.
+
+
+Building
+--------
+
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+$ sudo make install
