@@ -8,6 +8,7 @@ using namespace std;
 class Params
 {
 public:
+	explicit Params();
 	bool parseParams(int argc, char *argv[]);
 
 	string file() const;

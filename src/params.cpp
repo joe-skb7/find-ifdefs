@@ -2,6 +2,11 @@
 
 #include <iostream>
 
+Params::Params()
+	: m_file(), m_def()
+{
+}
+
 bool Params::parseParams(int argc, char *argv[])
 {
 	if (argc != 3) {

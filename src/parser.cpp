@@ -6,7 +6,7 @@
 #include <iostream>
 
 Parser::Parser()
-	: m_defLineNum(0)
+	: m_filePath(), m_fileContent(), m_ifdefs(), m_defLineNum(0)
 {
 }
 
