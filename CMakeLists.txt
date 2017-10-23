@@ -3,7 +3,7 @@ set(PROJECT find-ifdefs)
 project(${PROJECT})
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -pedantic -Weffc++")
 
 include_directories(include)
 set(HEADERS
